@@ -200,7 +200,27 @@ return view.extend({
         o.placeholder = _('Unmodified');
         o.value('system', 'System');
         o.value('gvisor', 'gVisor');
+        o.value('mips', 'MIPS');
         o.value('mixed', 'Mixed');
+        
+        o = s.taboption('tun', form.Value, 'tun_udp_timeout', _('UDP Timeout'));
+        o.datatype = 'uinteger';
+        o.placeholder = '300';
+        o.default = '300';
+        o.description = _('UDP connection timeout in seconds');
+
+        o = s.taboption('tun', form.ListValue, 'tun_endpoint_independent_nat', _('Endpoint Independent NAT'));
+        o.value('0', _('Disable'));
+        o.value('1', _('Enable'));
+        o.default = '0';
+        o.description = _('Enable endpoint-independent NAT');
+        
+        o = s.taboption('tun', form.ListValue, 'tun_disable_icmp_forwarding', _('Disable ICMP Forwarding'));
+        o.optional = true;
+        o.placeholder = _('Unmodified');
+        o.value('0', _('Disable'));
+        o.value('1', _('Enable'));
+        o.default = '1';
 
         o = s.taboption('tun', form.Value, 'tun_mtu', _('MTU'));
         o.datatype = 'uinteger';
