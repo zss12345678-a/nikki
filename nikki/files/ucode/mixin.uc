@@ -58,9 +58,12 @@ config['tun'] = {};
 config['tun']['enable'] = uci_bool(uci.get('nikki', 'mixin', 'tun_enabled'));
 config['tun']['device'] = uci.get('nikki', 'mixin', 'tun_device');
 config['tun']['stack'] = uci.get('nikki', 'mixin', 'tun_stack');
+config['tun']['udp-timeout'] = uci_int(uci.get('nikki', 'mixin', 'tun_udp_timeout'));
+config['tun']['endpoint-independent-nat'] = uci_bool(uci.get('nikki', 'mixin', 'tun_endpoint_independent_nat'));
 config['tun']['mtu'] = uci_int(uci.get('nikki', 'mixin', 'tun_mtu'));
 config['tun']['gso'] = uci_bool(uci.get('nikki', 'mixin', 'tun_gso'));
 config['tun']['gso-max-size'] = uci_int(uci.get('nikki', 'mixin', 'tun_gso_max_size'));
+config['tun']['disable-icmp-forwarding'] = uci_bool(uci.get('nikki', 'mixin', 'tun_disable_icmp_forwarding'));
 if (uci_bool(uci.get('nikki', 'mixin', 'tun_dns_hijack'))) {
 	config['tun']['dns-hijack'] = uci_array(uci.get('nikki', 'mixin', 'tun_dns_hijacks'));
 }
