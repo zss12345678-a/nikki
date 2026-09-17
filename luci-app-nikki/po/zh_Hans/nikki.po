@@ -877,6 +877,21 @@ msgstr "嗅探器配置"
 msgid "Stack"
 msgstr "栈"
 
+msgid "UDP Timeout"
+msgstr "UDP 超时时间"
+
+msgid "Endpoint Independent NAT"
+msgstr "端点独立 NAT"
+
+msgid "UDP connection timeout in seconds"
+msgstr "UDP 连接超时时间，单位：秒"
+
+msgid "Enable endpoint-independent NAT"
+msgstr "启用端点独立 NAT"
+
+msgid "Disable ICMP Forwarding"
+msgstr "禁用 ICMP 转发"
+
 #: applications/luci-app-nikki/htdocs/luci-static/resources/view/nikki/app.js:163
 msgid "Stack Size Hard Limit"
 msgstr "栈大小硬限制"
